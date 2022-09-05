@@ -1,0 +1,9 @@
+@use '/src/scss/colors.scss';
+@use '/src/scss/breakpoints.scss';
+
+
+:host
+{
+    display: flex;
+    @include breakpoints.mobile { background-color: colors.$secondary; }
+}

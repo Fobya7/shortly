@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CtaComponent } from './cta/cta.component';
 import { FooterContent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { NavigationComponent } from './header/navigation/navigation.component';
 import { HeroComponent } from './hero/hero.component';
 import { ShortenLinkComponent } from './shorten-link/shorten-link.component';
 
@@ -14,6 +15,7 @@ import { ShortenLinkComponent } from './shorten-link/shorten-link.component';
     declarations: [
         AppComponent,
         HeaderComponent,
+        NavigationComponent,
         HeroComponent,
         ShortenLinkComponent,
         AdvancedStatisticsPromo,

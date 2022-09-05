@@ -1,0 +1,46 @@
+@use '/src/scss/colors.scss';
+@use '/src/scss/breakpoints.scss';
+
+
+/* colors */
+
+:host > *, button
+{
+    background-color: colors.$card;
+    color: colors.$on-card;
+}
+
+
+/* layout */
+
+.navigation-icon
+{
+    display: flex;
+    align-items: center;
+
+    & img {
+        height: 25px;
+        width: 25px;
+        }
+}
+
+:host {
+    display: flex;
+    flex-flow: row;
+    }
+
+@include breakpoints.mobile
+{
+    .navigation-desktop-container { display: none; }
+    .navigation-mobile-container { position: absolute; }
+    :host { justify-content: space-between; }
+}
+@include breakpoints.desktop
+{
+    .navigation-icon, .navigation-mobile-container {
+        display: none;
+        }
+    .navigation-desktop-container { width: 100%; }
+}
+
+

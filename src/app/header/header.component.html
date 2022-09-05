@@ -1,7 +1,16 @@
 
-Features
-Pricing
-Resources
+<div class="logo">
+    <img src="assets/logo.svg">
+</div>
 
-Login
-Sign Up
+<button class="navigation-icon" (click)="toggleMobileNavVisible()">
+    <img src="assets/bars-solid.svg" alt="show navigation">
+</button>
+
+<div class="navigation-desktop-container">
+    <navigation></navigation>
+</div>
+
+<div class="navigation-mobile-container" *ngIf="isMobileNavVisible">
+    <navigation></navigation>
+</div>
