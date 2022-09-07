@@ -2,32 +2,14 @@
 @use '/src/scss/breakpoints.scss';
 
 
-/* colors */
-
-:host > *, button
+:host
 {
-    background-color: colors.$card;
-    color: colors.$on-card;
-}
-
-
-/* layout */
-
-.navigation-icon
-{
-    display: flex;
-    align-items: center;
-
-    & img {
-        height: 25px;
-        width: 25px;
-        }
-}
-
-:host {
     display: flex;
     flex-flow: row;
-    }
+    align-items: center;
+
+    margin: 1rem 0;
+}
 
 @include breakpoints.mobile
 {
@@ -43,4 +25,16 @@
     .navigation-desktop-container { width: 100%; }
 }
 
+.logo
+{
+    display: flex;
+    align-items: center;
 
+    margin-right: 1rem;
+}
+
+.navigation-icon
+{
+    width: 25px;
+    height: 25px;
+}

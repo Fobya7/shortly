@@ -1,3 +1,5 @@
+@use '/src/scss/colors.scss';
+
 
 html > *, button
 {
@@ -8,6 +10,26 @@ html > *, button
     
     font-size: 18px;
     font-family: 'Poppins';
+}
 
-    border: none;
+button
+{
+    background-color: transparent;
+    color: colors.$on-card-variant;
+    &:hover { color: colors.$on-card-header; }
+}
+
+hr, button { border: none; }
+
+
+.cta-button
+{
+    background-color: colors.$primary;
+    color: colors.$on-primary;
+    &:hover {
+        background-color: colors.$primary-variant; 
+        color: colors.$on-primary !important;
+        }
+
+    border-radius: 999px;
 }

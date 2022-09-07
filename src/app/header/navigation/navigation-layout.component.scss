@@ -3,44 +3,68 @@
 
 :host
 {
-    @include breakpoints.mobile { flex-flow: column; }
-    @include breakpoints.desktop { flex-flow: row; }
-}
+    display: flex;
 
-@include breakpoints.mobile { :host 
-{
-    position: fixed;
-    top: 2rem;
-    left: 0;
-    right: 0;
-
-    margin: 0 5%;
-    border-radius: 0.5rem;
-
-    align-items: center;
-    & > * {
-        display: flex;
+    @include breakpoints.mobile 
+    {
         flex-flow: column;
         align-items: center;
-        }
+        position: fixed;
 
-    & hr {
-        width: 50%;
-        margin: 0 25%;
-        }
-} }
+        top: 3.5rem;
+        left: 0;
+        right: 0;
+        margin: 0 5%;
+        padding: 0.5rem 0;
 
-@include breakpoints.desktop { :host
-{
-    width: 100%;
-    justify-content: space-between;
-
-    & :nth-child(n) {
-        display: flex;
+        border-radius: 0.5rem;
+    }
+    @include breakpoints.desktop
+    {
         flex-flow: row;
-        }
-    
-    & hr {
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+:host :nth-child(n)
+{
+    display: flex;
+
+    @include breakpoints.mobile
+    {
+        flex-flow: column;
+        align-items: center;
+    }
+    @include breakpoints.desktop
+    {
+        flex-flow: row;
+    }
+}
+
+hr
+{
+    @include breakpoints.mobile
+    {
+        width: 90%;
+        margin: 0 5%;
+        height: 0.5px;
+    }
+    @include breakpoints.desktop
+    {
         display: none !important;
-        }
-} }
+    }
+}
+
+button
+{
+    @include breakpoints.mobile
+    {
+        width: 10rem;
+        padding: 0.5rem;
+    }
+    @include breakpoints.desktop
+    {
+        padding: 0.2rem 1rem;
+    }
+}

@@ -2,8 +2,18 @@
 @use '/src/scss/breakpoints.scss';
 
 
-:host
+:host { @include breakpoints.mobile
 {
-    display: flex;
-    @include breakpoints.mobile { background-color: colors.$secondary; }
+    background-color: colors.$secondary;
+} }
+
+:host button { @include breakpoints.mobile
+{
+    color: colors.$on-secondary;
+    &:hover { color: colors.$on-card-variant; }
+} }
+
+hr
+{
+    background-color: colors.$on-secondary;
 }
