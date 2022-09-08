@@ -1,6 +1,11 @@
 @use '/src/scss/colors.scss';
 
 
+html
+{
+    overflow-x: hidden;
+}
+
 html > *, button
 {
     margin: 0;
@@ -12,15 +17,15 @@ html > *, button
     font-family: 'Poppins';
 }
 
+
+hr, button { border: none; }
+
 button
 {
     background-color: transparent;
     color: colors.$on-card-variant;
     &:hover { color: colors.$on-card-header; }
 }
-
-hr, button { border: none; }
-
 
 .cta-button
 {
@@ -32,4 +37,5 @@ hr, button { border: none; }
         }
 
     border-radius: 999px;
+    padding: 0.5rem 2rem;
 }

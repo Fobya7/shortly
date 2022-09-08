@@ -7,8 +7,13 @@
     display: flex;
     flex-flow: row;
     align-items: center;
+    padding: 1rem 0;
 
-    margin: 1rem 0;
+    @include breakpoints.mobile {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        }
+    @include breakpoints.desktop { height: 100%; }
 }
 
 @include breakpoints.mobile

@@ -12,3 +12,10 @@ main, header-content, footer-content
         padding: 0 10%;
         }
 }
+
+header { @include breakpoints.desktop
+{
+    display: flex;
+    justify-content: center;
+    height: 15vh;
+} }

@@ -1,0 +1,16 @@
+@use '/src/scss/colors.scss';
+
+
+h1
+{
+    font-size: 64px;
+    line-height: 120%;
+    margin-bottom: 0;
+}
+
+p
+{
+    font-weight: 5  00;
+    margin-top: 0;
+    color: colors.$on-card-variant;
+}

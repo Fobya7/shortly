@@ -1,0 +1,44 @@
+@use '/src/scss/breakpoints.scss';
+
+
+:host
+{
+    display: flex;
+    @include breakpoints.mobile  { flex-flow: column-reverse; }
+    @include breakpoints.desktop {
+        flex-flow: row;
+        align-items: center;
+        height: 85vh;
+        }
+}
+
+.blurb
+{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    @include breakpoints.mobile {
+        width: 100%;
+        padding: 3rem 0;
+        text-align: center;
+        align-items: center;
+        }
+    @include breakpoints.desktop {
+        width: 50%;
+        margin-right: 10%;
+        }
+}
+
+.hero-image
+{
+    display: flex;
+    justify-content: center;
+
+    margin-right: -30%;
+    @include breakpoints.mobile { width: 100% + 30%; }
+    @include breakpoints.desktop { width: 40% + 30%; }
+
+    & img { width: 100%; }
+}
