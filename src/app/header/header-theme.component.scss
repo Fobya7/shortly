@@ -7,10 +7,8 @@
     color: colors.$on-card;
 }
 
-.navigation-icon
+.navigation-icon { img
 {
-    img
-    {
-        filter: invert(62%) sepia(7%) saturate(231%) hue-rotate(216deg) brightness(92%) contrast(84%);
-    }
-}
+    filter: invert(62%) sepia(7%) saturate(231%)
+            hue-rotate(216deg) brightness(92%) contrast(84%);
+} }
