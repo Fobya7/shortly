@@ -1,0 +1,41 @@
+@use '/src/scss/colors.scss';
+@use '/src/scss/breakpoints.scss';
+
+
+:host
+{
+    background-color: colors.$background;
+    display: block;
+    width: 100%;
+
+    @include breakpoints.mobile {
+        margin: 0 -5%;
+        padding: 0 5%;
+        }
+    @include breakpoints.desktop {
+        margin: 0 -15%;
+        padding: 0 15%;
+        }
+}
+
+.topper
+{
+    padding: 2rem;
+}
+
+
+.cards-container
+{
+    display: flex;
+    flex-direction: row;
+
+    & :nth-child(n)
+    {
+        margin: 1rem;
+    }
+}
+
+.card
+{
+    background-color: colors.$card;
+}
